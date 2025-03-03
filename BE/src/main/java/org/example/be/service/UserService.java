@@ -1,7 +1,8 @@
 package org.example.be.service;
 
-import org.springframework.stereotype.Service;
+import org.example.be.security.dto.JoinRequestDto;
 
-@Service
 public interface UserService {
+
+    String join(JoinRequestDto request);
 }
