@@ -1,2 +1,4 @@
-/BE/
-application.properties
+.idea
+.gradle
+
+/BE/src/main/resources/
