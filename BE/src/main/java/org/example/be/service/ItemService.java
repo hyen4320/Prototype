@@ -1,7 +1,9 @@
 package org.example.be.service;
 
-import org.springframework.stereotype.Service;
+import org.example.be.dto.item.ReqItem;
 
-@Service
+
 public interface ItemService {
+    void save(ReqItem reqItem);
+
 }
