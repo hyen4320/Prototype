@@ -13,8 +13,10 @@ import org.springframework.context.annotation.Configuration;
 public class SwaggerConfiguration {
     @Bean
     public OpenAPI api() {
-        SecurityScheme apiKey = new SecurityScheme()
-                .type(SecurityScheme.Type.APIKEY)
+        SecurityScheme securityScheme = new SecurityScheme()
+                .type(SecurityScheme.Type.HTTP)  // HTTP 타입으로 변경
+                .scheme("bearer")                // Bearer 스킴 지정
+                .bearerFormat("JWT")             // JWT 형식 지정
                 .in(SecurityScheme.In.HEADER)
                 .name("Authorization");
 
@@ -22,7 +24,7 @@ public class SwaggerConfiguration {
                 .addList("Bearer Token");
 
         return new OpenAPI()
-                .components(new Components().addSecuritySchemes("Bearer Token", apiKey))
+                .components(new Components().addSecuritySchemes("Bearer Token", securityScheme))
                 .addSecurityItem(securityRequirement);
     }
 

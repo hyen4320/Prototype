@@ -1,4 +1,4 @@
-package org.example.be.security;
+package org.example.be.security.jwt;
 
 import org.example.be.model.User;
 import org.example.be.repository.UserRepository;
@@ -24,12 +24,5 @@ public class CustomUserDetailsService implements UserDetailsService {
 
         return new CustomUserDetails(user);
 
-//        User user = userRepository.findByUsername(username)
-//                .orElseThrow(() -> new UsernameNotFoundException("User not found: " + username));
-//
-//        return User.withUsername(user.getUsername())
-//                .password(user.getPassword())
-////                .roles(user.getRole())
-//                .build();
     }
 }

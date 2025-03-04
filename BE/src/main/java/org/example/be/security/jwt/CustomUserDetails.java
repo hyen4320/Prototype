@@ -1,4 +1,4 @@
-package org.example.be.security;
+package org.example.be.security.jwt;
 
 import lombok.Getter;
 import org.example.be.model.User;
