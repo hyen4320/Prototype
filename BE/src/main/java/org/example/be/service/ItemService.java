@@ -1,6 +1,6 @@
 package org.example.be.service;
 
-import org.example.be.dto.item.ReqItem;
+import org.example.be.security.dto.item.ReqItem;
 
 
 public interface ItemService {

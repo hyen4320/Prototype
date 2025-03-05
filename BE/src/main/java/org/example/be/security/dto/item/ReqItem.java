@@ -1,4 +1,4 @@
-package org.example.be.dto.item;
+package org.example.be.security.dto.item;
 
 import jakarta.persistence.ManyToOne;
 import lombok.Getter;
